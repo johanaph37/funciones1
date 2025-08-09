@@ -115,3 +115,4 @@ while (continuar) {
         continuar = false;
     }
 }
+console.log("Gracias por usar el sistema de facturación.");
