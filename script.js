@@ -63,3 +63,10 @@ const calcularSubtotal = () => {
     const tarifa = obtenerTarifa();
     return consumo * tarifa;
 }
+
+// 6. Función flecha: calcular monto del IVA
+const calcularIVA = () => {
+    const subtotal = calcularSubtotal();
+    const porcentaje = obtenerPorcentajeIVA();
+    return (subtotal * porcentaje) / 100;
+}
