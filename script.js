@@ -16,6 +16,7 @@ function obtenerConsumo() {
     }
     return consumoGuardado;
 } 
+obtenerConsumo()
 
 // 2. Función declarativa: tarifa por kWh
 function obtenerTarifa() {
@@ -29,4 +30,17 @@ function obtenerTarifa() {
     return tarifaGuardada;
 }
 obtenerTarifa()
+
+// 3. Función de expresión: cargo fijo por servicio
+const obtenerCargoFijo = function () {
+    if (cargoFijoGuardado === 0) {
+        let valor = parseFloat(prompt("Ingrese el cargo fijo por servicio:"));
+        while (isNaN(valor) || valor < 0) {
+            valor = parseFloat(prompt("Valor inválido. Ingresa el cargo fijo:"));
+        }
+        cargoFijoGuardado = valor;
+    }
+    return cargoFijoGuardado;
+}  
+obtenerCargoFijo()
 
