@@ -100,3 +100,18 @@ function mostrarFactura() {
     console.log("--------------------------------");
     console.log("TOTAL A PAGAR:", total, "pesos \n");
 }
+let continuar = true;
+while (continuar) {
+    consumoGuardado = 0;
+    tarifaGuardada = 0;
+    cargoFijoGuardado = 0;
+    porcentajeIVAGuardado = 0;
+
+    mostrarFactura();
+
+    const respuesta = prompt("¿Deseas generar otra factura? Escribe si 'no', cualquier otra tecla para continuar:");
+
+    if (respuesta === "no" || respuesta === "n") {
+        continuar = false;
+    }
+}
