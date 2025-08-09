@@ -78,3 +78,25 @@ const calcularTotal = () => {
     const cargo = obtenerCargoFijo();
     return subtotal + iva + cargo;
 }
+
+// 8. Función final: mostrar la factura completa
+function mostrarFactura() {
+
+    const consumo = obtenerConsumo();
+    const tarifa = obtenerTarifa();
+    const cargoFijo = obtenerCargoFijo();
+    const porcentajeIVA = obtenerPorcentajeIVA();
+    const subtotal = calcularSubtotal();
+    const montoIVA = calcularIVA();
+    const total = calcularTotal();
+
+    console.log("\n   FACTURA DE ENERGÍA    ");
+    console.log("Consumo mensual:", consumo, "kilovatio");
+    console.log("Tarifa por kilovatio:", tarifa, "pesos");
+    console.log("Subtotal:", subtotal, "pesos");
+    console.log("Cargo fijo:", cargoFijo, "pesos");
+    console.log("Porcentaje IVA:", porcentajeIVA, "%");
+    console.log(" IVA:", montoIVA, "pesos");
+    console.log("--------------------------------");
+    console.log("TOTAL A PAGAR:", total, "pesos \n");
+}
